@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
   req.on('data', function (chunk) {
     chunk = JSON.parse(chunk)
     if (chunk.pusher) {
-      let gitPull = execFileSync('sh ../pull.sh');
+      console.log(chunk)
     }
   });
   res.end();
